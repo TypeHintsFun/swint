@@ -59,9 +59,5 @@ class InfoTransferringAnt(Ant):
         draw.aura(for_ant=self, color=Color.LIGHT_GREEN)
 
         # Resend message to all near ants
-        for ant in near_ants:
+        for ant in near_ants:  # Here real robot will send message into void
             ant.send(message, uuid_)
-
-        # draw.aura(for_ant=self, color=Color.WHITE)
-        # for ant in self.iter_near_ants(AURA_RADIUS * 1.3):  # type: InfoTransferringAnt
-        #     draw.ant(ant, color=ant.act_color)
